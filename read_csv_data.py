@@ -31,7 +31,7 @@ def extract_nba_player_names_heights(csv_file_path):
                     #       'new_height', player_height)
                     continue
                     
-                player_heights[player_name] = player_height
+                player_heights[player_name] = float(player_height)
             
             # Print each row values with corresponding header name
             # for row in reader:
