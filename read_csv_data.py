@@ -6,7 +6,9 @@ import csv
 # csv_file_path = 'data/nba_players/all_seasons.csv'
 
 def extract_nba_player_names_heights(csv_file_path):
-        
+    """
+    return a dict, key: player_name, value: player_height
+    """
     try:
         with open(csv_file_path, mode='r', newline='', encoding='utf-8') as file:
             reader = csv.reader(file)
@@ -43,5 +45,10 @@ def extract_nba_player_names_heights(csv_file_path):
         print(f"File not found: {csv_file_path}")
     except Exception as e:
         print(f"An error occurred: {e}")
+
+    
+    # Add some dummy data for better visualization
+    player_heights['dummy short'] = 160.0
+    player_heights['dummy tall'] = 240.0
 
     return player_heights
